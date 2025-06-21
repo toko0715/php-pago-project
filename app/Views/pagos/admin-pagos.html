@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="monto">Ingrese el Monto</label>
+        <input type="number" name="monto" id="monto" required>
+        <label for="tipo">Seleccione el metodo de pago</label>
+        <select name="tipo" id="tipo">
+            <option value="paypal">PayPal</option>
+            <option value="efectivo">Pago en Efectivo</option>
+            <option value="tarjeta">Tarjeta de Credito</option>
+        </select>
+        <input type="hidden" name="action" value="add-transaccion">
+        <input type="submit" value="Enviar">
+    </form>
+    <br><br><br>
+    <form method="post">
+        <input type="hidden" name="action" value="show-database">
+        <input type="submit" value="Mostrar datos">
+    </form>
+    <form method="post">
+        <label for="id">Ingrese el ID de la transaccion a borrar (puede mostrarlas con "Mostrar Datos")</label>
+        <input type="number" name="id" required>
+        <input type="hidden" name="action" value="delete-data">
+        <input type="submit" value="Eliminar!!!">
+    </form>
+    <form method="post">
+        <label for="metodo">Procesar el pago (ingrese id)</label>
+        <input type="number" name="id" required>
+        <input type="hidden" name="action" value="procesar-pago">
+        <input type="submit" value="Procesar Pago (solo es para probar)">
+    </form>
+</body>
+</html>
