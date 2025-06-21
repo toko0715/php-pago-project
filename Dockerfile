@@ -1,4 +1,5 @@
 from php:8.2-cli
+RUN mkdir -p /usr/local/bin
 RUN curl -sS https://getcomposer.org/installer | php  -- --install-dir=/usr/local/bin/--filename=composer
 COPY . /app
 WORKDIR /app
